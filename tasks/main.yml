@@ -1,0 +1,20 @@
+---
+# tasks file for koji-builder
+- name: Main | Install required packages
+  yum: name={{item}} state=installed
+  with_items:
+    - koji-builder
+  tags:
+    - builder
+
+- name: Configure /etc/kojid/kojid.conf
+  template: src=kojid.conf.j2 dest=/etc/kojid/kojid.conf owner=root group=root mode=0644
+  notify:
+    - restart kojid  
+  tags:
+    - builder
+
+- name: "Ensure kojid is running"
+  service: name=kojid state=started enabled=yes
+  tags:
+    - builder
