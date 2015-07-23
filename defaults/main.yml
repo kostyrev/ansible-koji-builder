@@ -13,8 +13,8 @@ koji_builder_packager: Koji
 koji_builder_distribution: Koji
 koji_builder_mockhost: koji-linux-gnu
 koji_builder_rpmbuild_timeout: 86400
-koji_builder_server: http://hub.example.com/kojihub
-koji_builder_topurl: http://hub.example.com/kojifiles
+koji_builder_hub_server: "http://{{ hostvars[groups['koji_hub'][0]]['inventory_hostname'] }}/kojihub"
+koji_builder_topurl: "http://{{ hostvars[groups['koji_web'][0]]['inventory_hostname'] }}/kojifiles"
 koji_builder_allowed_scms: scm.example.com:/cvs/example git.example.org:/example svn.example.org:/users/*:no
 koji_builder_smtphost: example.com
 koji_builder_from_addr: Koji Build System <buildsys@example.com>
