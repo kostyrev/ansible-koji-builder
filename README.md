@@ -43,6 +43,8 @@ There are some variables in the default/main.yml which can (or needs to) be chan
 
 * `koji_builder_serverca`: This is the certificate of the CA that issued the HTTP server certificate. Default is /etc/pki/koji/koji_ca_cert.crt.
 
+* `koji_builder_patch_crearepo`: Weather or not patch createrepo python code. Default is false. See https://bugzilla.redhat.com/show_bug.cgi?id=1091708
+
 
 Dependencies
 ------------

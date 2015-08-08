@@ -24,3 +24,4 @@ koji_builder_krbservice: host
 koji_builder_cert: "/etc/pki/koji/pems/{{ ansible_fqdn }}.pem"
 koji_builder_ca: /etc/pki/koji/koji_ca_cert.crt
 koji_builder_serverca: /etc/pki/koji/koji_ca_cert.crt
+koji_builder_patch_crearepo: false

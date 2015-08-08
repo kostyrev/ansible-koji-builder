@@ -14,6 +14,12 @@
   tags:
     - builder
 
+- name: Patch createrepo
+  template: src=createrepo.patch.j2 dest=/usr/lib/python2.7/site-packages/createrepo/__init__.py owner=root group=root mode=0644
+  when: koji_builder_patch_crearepo == true
+  tags:
+    - builder
+
 - name: "Ensure kojid is running"
   service: name=kojid state=started enabled=yes
   tags:
