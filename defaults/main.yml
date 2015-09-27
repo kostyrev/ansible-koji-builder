@@ -1,7 +1,7 @@
 ---
 # defaults file for koji-builder
 koji_builder_user: "{{ ansible_fqdn }}"
-koji_builder_sleeptime: 15
+koji_builder_sleeptime: 5
 koji_builder_maxjobs: 10
 koji_builder_minspace: 8192
 koji_builder_topdir: /mnt/koji
