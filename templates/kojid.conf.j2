@@ -1,8 +1,5 @@
 [kojid]
 
-;same as you will use with koji add-host
-user = {{ koji_builder_user }}
-
 ; The number of seconds to sleep between tasks
 sleeptime = {{ koji_builder_sleeptime }}
 
@@ -83,7 +80,7 @@ from_addr = {{ koji_builder_from_addr }}
 ;configuration for SSL authentication
 
 ;client certificate
-cert = {{ koji_builder_cert }}
+cert = {{ koji_builder_pem }}
 
 ;certificate of the CA that issued the client certificate
 ca = {{ koji_builder_ca }}
