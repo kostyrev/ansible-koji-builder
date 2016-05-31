@@ -14,7 +14,7 @@
     dest: /etc/kojid/kojid.conf
     owner: root
     group: root
-    mode: 0644
+    mode: '0640'
   notify:
     - restart kojid  
   tags:
