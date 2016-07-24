@@ -1,5 +1,6 @@
 ---
 # defaults file for koji-builder
+koji_builder_package: koji-builder-1.10.1-1.el7.centos
 koji_builder_sleeptime: 5
 koji_builder_maxjobs: 10
 koji_builder_minspace: 8192

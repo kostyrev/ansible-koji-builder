@@ -1,9 +1,9 @@
 ---
 # tasks file for koji-builder
-- name: Main | Install required packages
+- name: Main | Install {{ koji_builder_package }}
   package:
-    name: koji-builder
-    state: installed
+    name: "{{ koji_builder_package }}"
+    state: present
   tags:
     - builder
     - builder-package
